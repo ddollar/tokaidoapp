@@ -56,6 +56,12 @@ tokaidoapp_preconfigure()
   fi
 }
 
+tokaidoapp_configure()
+{
+  configure_flags+=(--with-arch=x86_64,i386)
+  package configure
+}
+
 tokaidoapp_ext_configure()
 {
   if file contains in ext/Setup \
